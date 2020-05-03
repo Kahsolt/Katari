@@ -1,0 +1,45 @@
+Compiled from "test.java"
+class test {
+  test();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static int fact(int);
+    Code:
+       0: iload_0
+       1: ifne          8
+       4: iconst_1
+       5: goto          16
+       8: iload_0
+       9: iload_0
+      10: iconst_1
+      11: isub
+      12: invokestatic  #2                  // Method fact:(I)I
+      15: imul
+      16: ireturn
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: iconst_5
+       1: istore_1
+       2: getstatic     #3                  // Field java/lang/System.out:Ljava/io/PrintStream;
+       5: ldc           #4                  // String fact(%d) = %d
+       7: iconst_2
+       8: anewarray     #5                  // class java/lang/Object
+      11: dup
+      12: iconst_0
+      13: iload_1
+      14: invokestatic  #6                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      17: aastore
+      18: dup
+      19: iconst_1
+      20: iload_1
+      21: invokestatic  #2                  // Method fact:(I)I
+      24: invokestatic  #6                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      27: aastore
+      28: invokevirtual #7                  // Method java/io/PrintStream.printf:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;
+      31: pop
+      32: return
+}

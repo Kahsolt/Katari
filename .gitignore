@@ -1,0 +1,19 @@
+# VSCode
+.vscode
+
+# PPT swapfile
+~*.pptx
+
+# media recording
+*.mp[34]
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# MISC tmpfile
+/tmp
+*.o
+*.log
+*.db
