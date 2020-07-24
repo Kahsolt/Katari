@@ -11,7 +11,7 @@ def twelvetone_equal(base):
   return np.array([base*2**(i/12) for i in range(13)])
 
 def circle_of_fifth(base):
-  lower, upper = base, base * 2
+  lower, upper = 1, 2
   retA, retD = [lower, upper], [lower, upper]
   
   # asc
@@ -27,7 +27,7 @@ def circle_of_fifth(base):
     if cur < lower: cur *= 2
     retD.append(cur)
   
-  retA, retD = np.array(sorted(retA)), np.array(sorted(retD))
+  retA, retD = base * np.array(sorted(retA)), base * np.array(sorted(retD))
   ret = (retA + retD) / 2
   return ret, retA, retD
 
